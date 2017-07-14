@@ -1,4 +1,7 @@
 # docker-serverspec
+
+[![Build Status](https://travis-ci.org/jadametz/docker-serverspec.svg?branch=master)](https://travis-ci.org/jadametz/docker-serverspec)
+
 `docker-serverspec` is a minimal Ruby image capable of running rspec / serverspec for the (integration) testing of Docker images.
 
 ## Getting Started
