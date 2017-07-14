@@ -12,8 +12,8 @@ $ docker run --rm --name integration-test \
 ➭ -w /docker-serverspec \
 ➭ jadametz/serverspec \
 ➭ spec/
-.
+...
 
-Finished in 1.88 seconds (files took 0.42518 seconds to load)
-1 example, 0 failures
+Finished in 0.97621 seconds (files took 0.54975 seconds to load)
+3 examples, 0 failures
 ```
