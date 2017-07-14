@@ -3,15 +3,15 @@
 
 ## Getting Started
 
-The following command can be used and tested in the `examples/` directory.
+The following command can be used as an example as well as to test the `Dockerfile` for this repository.
 
 ```bash
 $ docker run --rm --name integration-test \
 ➭ -v /var/run/docker.sock:/var/run/docker.sock \
-➭ -v $(pwd):/app \
-➭ -w /app \
+➭ -v $(pwd):/docker-serverspec \
+➭ -w /docker-serverspec \
 ➭ jadametz/serverspec \
-➭ Dockerfile_spec.rb
+➭ spec/
 .
 
 Finished in 1.88 seconds (files took 0.42518 seconds to load)
