@@ -9,17 +9,21 @@ describe "Dockerfile" do
     set :os, family: :alpine
     set :backend, :docker
     set :docker_image, image.id
+    set :docker_container_create_options, { 'Entrypoint' => ['ash'] }
   end
 
   describe package('build-base') do
     it { should be_installed }
   end
 
-  describe file('/Gemfile') do
-    it { should be_file }
-  end
-
-  describe file('/Gemfile.lock') do
-    it { should be_file }
+  [
+    'docker-api',
+    'rspec',
+    'rspec_junit_formatter',
+    'serverspec',
+  ].each do | gem |
+    describe package(gem) do
+      it { should be_installed.by('gem') }
+    end
   end
 end
