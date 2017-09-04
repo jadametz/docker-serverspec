@@ -17,6 +17,15 @@ describe "Dockerfile" do
   end
 
   [
+    'Gemfile',
+    'Gemfile.lock',
+  ].each do | file |
+    describe file("/#{ file }") do
+      it { should exist }
+    end
+  end
+
+  [
     'docker-api',
     'rspec',
     'rspec_junit_formatter',
