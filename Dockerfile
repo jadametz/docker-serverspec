@@ -1,5 +1,5 @@
 # docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v $(pwd):/your-app jadametz/serverspec
-FROM ruby:2.4.1-alpine
+FROM ruby:2.6.2-alpine3.9
 LABEL maintainer="jesseadametz@gmail.com"
 
 RUN apk add --update --no-cache build-base
